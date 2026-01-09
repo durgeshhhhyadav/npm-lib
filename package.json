@@ -1,0 +1,36 @@
+{
+  "name": "@durgeshhhhyadav/my-lib",
+  "version": "1.0.0",
+  "description": "A useful npm library",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "library",
+    "npm"
+  ],
+  "author": "durgeshhhhyadav",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/durgeshhhhyadav/my-lib"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/my-awesome-library/issues"
+  },
+  "homepage": "https://github.com/yourusername/my-awesome-library#readme"
+}
