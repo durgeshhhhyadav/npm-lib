@@ -1,36 +1,49 @@
 {
-  "name": "@durgeshhhhyadav/my-lib",
+  "name": "@core-ops/core",
   "version": "1.0.0",
-  "description": "A useful npm library",
+  "description": "High-performance core data structures and algorithms for JavaScript and TypeScript",
+  "private": false,
+
   "main": "dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "module": "dist/index.esm.js",
+
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+
   "files": [
     "dist",
-    "LICENSE",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
+
   "scripts": {
-    "build": "tsc",
+    "clean": "npx rimraf dist",
+    "build": "npm run clean && tsc",
     "dev": "tsc --watch",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublishOnly": "npm run build"
+    "pack": "npm pack",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"No tests yet\""
   },
+
   "keywords": [
-    "library",
-    "npm"
+    "core",
+    "data-structures",
+    "algorithms",
+    "typescript",
+    "javascript",
+    "library"
   ],
-  "author": "durgeshhhhyadav",
+
+  "author": "Durgesh Yadav",
   "license": "MIT",
+
   "devDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/durgeshhhhyadav/my-lib"
-  },
-  "bugs": {
-    "url": "https://github.com/yourusername/my-awesome-library/issues"
-  },
-  "homepage": "https://github.com/yourusername/my-awesome-library#readme"
+    "typescript": "^5.0.0",
+    "rimraf": "^5.0.0"
+  }
 }
