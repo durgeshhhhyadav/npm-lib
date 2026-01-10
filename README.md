@@ -1,4 +1,3 @@
-```md
 # Core Ops – High-Performance Data Structures for TypeScript
 
 Core Ops is a fast, predictable, and fully typed data structures library written in TypeScript.
@@ -6,15 +5,12 @@ It is designed for real-world frontend and backend usage, interview preparation,
 
 All structures are explicitly implemented with documented time complexity and iterable support.
 
----
 
 ## Installation
 
 ```bash
 npm install @core-ops/core
 ```
-
----
 
 ## Arrays
 
