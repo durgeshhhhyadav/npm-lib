@@ -1,6 +1,6 @@
 {
   "name": "@core-ops/core",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "High-performance core data structures and algorithms for JavaScript and TypeScript",
   "private": false,
 
