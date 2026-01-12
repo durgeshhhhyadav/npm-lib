@@ -347,6 +347,67 @@ for (const value of stack) {
   console.log(value);
 }
 ```
+---
+
+## Heaps
+
+### Binary Heap
+
+A Binary Heap is a complete binary tree stored as an array.
+It is the foundation for Priority Queue, scheduling systems, and graph algorithms.
+
+#### Operations & Time Complexity
+
+| Operation | Complexity |
+| --------- | ---------- |
+| insert    | O(log n)   |
+| extract   | O(log n)   |
+| peek      | O(1)       |
+| size      | O(1)       |
+
+---
+
+### Min Heap
+
+In a Min Heap, the smallest element always stays at the root.
+
+#### Example
+
+```ts
+const minHeap = new MinHeap<number>();
+
+minHeap.insert(10);
+minHeap.insert(5);
+minHeap.insert(20);
+
+console.log(minHeap.peek());
+console.log(minHeap.extract());
+
+for (const value of minHeap) {
+  console.log(value);
+}
+
+```
+
+---
+
+### Max Heap
+
+In a Max Heap, the largest element always stays at the root.
+
+#### Example
+
+```ts
+const maxHeap = new MaxHeap<number>();
+
+maxHeap.insert(10);
+maxHeap.insert(5);
+maxHeap.insert(20);
+
+console.log(maxHeap.peek());
+console.log(maxHeap.extract());
+
+```
 
 ---
 
@@ -373,9 +434,4 @@ console.log(comparator.greaterThan(5, 3));
 console.log(comparator.equal(10, 10));
 ```
 
----
 
-## License
-
-MIT © Durgesh Yadav
-```

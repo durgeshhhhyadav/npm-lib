@@ -12,3 +12,6 @@ export * from "./linked-lists";
 
 // Caches
 export * from "./caches";
+
+// Heap
+export * from "./heap";
