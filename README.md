@@ -288,7 +288,10 @@ for (const value of deque) {
 
 ---
 
-### Priority Queue
+### Priority Queue (Heap-Based)
+
+A Priority Queue is built on top of a Binary Heap.
+Higher priority elements are dequeued first.
 
 #### Operations & Time Complexity
 
