@@ -15,3 +15,6 @@ export * from "./caches";
 
 // Heap
 export * from "./heap";
+
+// Sorting
+export { heapSort, indexedHeapSort, mergeSort, quickSort} from "./sorting";
