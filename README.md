@@ -977,4 +977,75 @@ console.log(users);
 // Note: Users with the same age (30) preserve their original order (id: 1 before id: 2)
 
 ```
+---
 
+## HashMap
+
+A **high-performance, generic HashMap** implementation built for
+**predictable performance, explicit behavior, and library-grade usage**.
+
+Unlike JavaScript’s built-in `Map` or plain objects `{}`, this HashMap
+provides **clear complexity guarantees**, **custom hashing support**,
+and **transparent collision handling**.
+
+---
+
+### Key Characteristics
+
+- Generic & type-safe (`HashMap<K, V>`)
+- Collision handling via **Separate Chaining**
+- Automatic resizing with fixed **load factor (0.75)**
+- Optional **custom hash function**
+- Deterministic iteration order
+- Fully iterable (`for...of` support)
+- Works with **primitive and object keys**
+- Designed for **predictable performance**
+
+---
+
+### Time Complexity (Average Case)
+
+| Method    | Time Complexity | Notes                   |
+| --------- | --------------- | ----------------------- |
+| `set`     | O(1)            | Amortized, may resize   |
+| `get`     | O(1)            | Constant lookup         |
+| `has`     | O(1)            | Uses same path as `get` |
+| `delete`  | O(1)            | Constant removal        |
+| `clear`   | O(n)            | Reinitializes buckets   |
+| `size`    | O(1)            | Stored counter          |
+| `isEmpty` | O(1)            | Size check              |
+| `keys`    | O(n)            | Iterates entries        |
+| `values`  | O(n)            | Iterates entries        |
+| `entries` | O(n)            | Iterates entries        |
+| iteration | O(n)            | `for...of`              |
+
+
+**Worst Case:**
+All operations degrade to **O(n)** if all keys collide into one bucket
+(rare with proper hashing and resizing).
+
+**Overall Space Complexity:** `O(n)`
+
+---
+
+### Example
+
+```ts
+import { HashMap } from '@core-ops/core';
+
+const map = new HashMap<string, number>();
+
+map.set('a', 1);
+map.set('b', 2);
+
+console.log(map.get('a')); 
+// Expected output: 1
+
+console.log(map.has('b')); 
+// Expected output: true
+
+map.delete('a');
+console.log(map.get('a')); 
+// Expected output: undefined
+```
+Full examples: [`docs/hashmap.md`](./docs/hashmap.md)
