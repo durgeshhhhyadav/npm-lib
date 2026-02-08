@@ -18,3 +18,6 @@ export * from "./heap";
 
 // Sorting
 export { heapSort, indexedHeapSort, mergeSort, quickSort} from "./sorting";
+
+//Hash
+export * from "./hash"
